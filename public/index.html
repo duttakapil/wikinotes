@@ -5,6 +5,7 @@
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
@@ -21,14 +22,14 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- update the version number as needed -->
-    <script defer src="/__/firebase/4.1.3/firebase-app.js"></script>
+    <script  src="/__/firebase/4.1.3/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/4.1.3/firebase-auth.js"></script>
-    <script defer src="/__/firebase/4.1.3/firebase-database.js"></script>
-    <script defer src="/__/firebase/4.1.3/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/4.1.3/firebase-storage.js"></script>
+    <script  src="/__/firebase/4.1.3/firebase-auth.js"></script>
+    <script  src="/__/firebase/4.1.3/firebase-database.js"></script>
+    <script  src="/__/firebase/4.1.3/firebase-messaging.js"></script>
+    <script  src="/__/firebase/4.1.3/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/init.js"></script>
 
     <link href="stylesheets/main.css" rel="stylesheet"/>
     <link rel="stylesheet" href="/stylesheets/WikiNotes.css">
@@ -41,7 +42,7 @@
     <nav>
         <div class="nav-wrapper blue">
             <a class="brand-logo center" href="http://idoco.github.io/map-chat/">WikiNotes</a>
-            <a class="right" data-target="modal">Sign in </a>
+            <a class="right" data-target="modal" id="sign-in">Sign in </a>
         </div>
     </nav>
 </div>
@@ -54,6 +55,17 @@
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
+
+<div id="modal-msg" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <textarea id="msg-content" rows="10" cols="50" placeholder="What's happening here?"></textarea>
+    </div>
+    <div class="modal-footer">  
+        <button class="btn waves-effect waves-light" id='msg-button'>Submit
+            <i class="material-icons right">send</i>
+        </button>
     </div>
 </div>
 
@@ -74,7 +86,7 @@
 </div>
 
 <div id="map-canvas"></div>
-
+<!--
 <div class="center input-wrapper">
     <div class="input-field">
         <input placeholder="Type a message" id="input" type="text" maxlength="101">
@@ -85,7 +97,7 @@
     <a id="send-button" class="btn-floating btn-large waves-effect waves-light blue">
         <i class="large mdi-content-send"></i>
     </a>
-</div>
+</div>-->
 
 <!--<div class="fixed-action-btn btn-clear">
     <a id="clear-button" class="btn-floating btn-large waves-effect waves-light red"
@@ -102,12 +114,11 @@
 <script type="text/javascript" src="javascript/modernizr.custom.js"></script>
 <script type="text/javascript" src="javascript/html-sanitizer-minified.js"></script>
 <script src="javascript/main.js"></script>
-<script src="javascript/map.js"></script>
-<!--<script src="/scripts/main.js"></script>-->
+<!--<script src="javascript/map.js"></script>-->
+<script src="/scripts/WikiNotes.js"></script>
 <script src="/scripts/WikiNotesMap.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&language=en&callback=initMap"></script>
-
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

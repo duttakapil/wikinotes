@@ -53,39 +53,4 @@ function subscribe(address) {
 }
 
 $( document ).ready(function() {
-    if(!Modernizr.websockets || !Modernizr.geolocation){
-        Materialize.toast('Browser not supported :(', 10000);
-    }
-
-    $("#side-nav-button").sideNav();
-
-    var input = $("#input");
-    input.keyup(function (e) {
-        if (e.keyCode == 13) {
-            sendMessage(topic, input);
-        }
-    });
-    input.focus();
-
-    $("#send-button").click(function(){
-        sendMessage(topic, input);
-    });
-
-    $("#notification_lever").change(function() {
-        advanced = !advanced;
-        Materialize.toast(advanced ? 'Notifications On' : 'Notifications Off', 3000);
-    });
-
-    $("#accurate_location_lever").change(function() {
-        shareAccurateLocation = !shareAccurateLocation;
-        Materialize.toast(shareAccurateLocation ? 'Sharing Your Accurate Location' : 'Sharing Your Fuzzy Location', 3000);
-    });
-
-    if (topic != "main"){
-        Materialize.toast("Private chat map - "+topic, 5000);
-    }
-
-    Materialize.toast("New: Click a user dot to mute it!", 7000);
-
-    $('.modal').modal();
 });
