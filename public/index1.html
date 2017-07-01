@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.1.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.1.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.1.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.1.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.1.3/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  </head>
+  <body>
+    <div class="loggedout-screen" id="logged-out-page">
+      <div class="header">
+        <div style="font-size: 2.5em;">WikiNotes</div>
+        <p style="margin: 10px; font-size: 1.8em">🗺 🖊️</p>
+      </div>
+
+        <div class="signin-button">
+          <!-- Accent-colored raised button with ripple -->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  id="sign-in">
+            Sign in with Google
+          </button>
+        </div>
+    </div>
+
+    <div class="loggedin-screen" id="logged-in-page" hidden>
+    </div>
+
+    <script src="../scripts/main.js"></script>
+  </body>
+</html>
